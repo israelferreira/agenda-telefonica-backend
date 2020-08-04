@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -31,12 +32,14 @@ public class Contato implements Serializable {
 	private String telefone;
 	
 	@Column
+	@Email
 	private String email;
 	
 	@JsonbDateFormat(value = "yyyy-MM-dd")	
 	@Column(name = "data_nascimento")	
 	private LocalDate dataNascimento;	
 	
+	@Size(max = 500)
 	@Column(name = "informacoes_extras")
 	private String informacoesExtras;
 		
