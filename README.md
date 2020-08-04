@@ -3,6 +3,7 @@
 
 ### [Link do repositório do front-end](https://github.com/israelferreira/agenda-telefonica-frontend)
 
+
 ## URLs:
 |  URL |  Método | Descrição |
 |----------|--------------|--------------|
@@ -12,8 +13,8 @@
 |`http://localhost:8080/agenda-telefonica-backend/api/contato/{id}`                              | DELETE | Deleta o registro do contato com o ID do parâmetro da URL |
 |`http://localhost:8080/agenda-telefonica-backend/api/contato/{id}`                              | PUT | Atualiza o registro do contato com o ID numérico do parâmetro da URL|
 
-## Validações das requisições POST e PUT
 
+## Validações das requisições POST e PUT
 Para executar os métodos HTTP da aplicação com alguma ferramenta de testes de API, como o [Postman](https://www.postman.com/) por exemplo, é necessário configurar o cabeçalho (header) da requisição com o atributo chave-valor "Content-Type: application/json".
 No método POST, o corpo da requisição deve ser enviado dessa forma:
 
@@ -25,11 +26,11 @@ No método POST, o corpo da requisição deve ser enviado dessa forma:
         "informacoesExtras":  null
     }
 
-O **nome** não pode ser nulo e deve ter entre 2 e 200 caracteres.
-O **telefone** pode ser nulo.
-O **email** pode ser nulo. Caso for preenchido, deve ser válido, contendo um "@" na string.
-A **data de nascimento** pode ser nula. Caso for preenchida, deve ser válida, no formato "YYYY-MM-DD".
-As **informações extras** do contato podem ser nulas. Se forem preenchidas, o tamanho máximo é de 500 caracteres.
+O **nome** não pode ser nulo e deve ter entre 2 e 200 caracteres.<br>
+O **telefone** pode ser nulo.<br>
+O **email** pode ser nulo. Caso for preenchido, deve ser válido, contendo um "@" na string.<br>
+A **data de nascimento** pode ser nula. Caso for preenchida, deve ser válida, no formato "YYYY-MM-DD".<br>
+As **informações extras** do contato podem ser nulas. Se forem preenchidas, o tamanho máximo é de 500 caracteres.<br>
 
 O corpo da requisição no método PUT é similar ao POST. A diferença é que o ID do registro a ser editado deve ser passado como parâmetro na URL.
 
@@ -44,11 +45,11 @@ Ainda na pasta main, criar um arquivo chamado module.xml e colar o seguinte text
 <?xml version="1.0" encoding="UTF-8"?>
 <module xmlns="urn:jboss:module:1.0" name="com.mysql">
 	<resources>
-		<resource-root path="mysql-connector-java-8.0.21.jar" />
+	  <resource-root path="mysql-connector-java-8.0.21.jar" />
 	</resources>
 	<dependencies>
-		<module name="javax.api"/>
-		<module name="javax.transaction.api"/>
+	  <module name="javax.api"/>
+	  <module name="javax.transaction.api"/>
 	</dependencies>
 </module>
 ```
